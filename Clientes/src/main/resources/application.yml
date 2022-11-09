@@ -1,0 +1,48 @@
+server:
+  port: 8000
+
+spring:
+  profiles:
+    active: dev
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+    username: sebaszc
+    password: ejemplo123
+    url: jdbc:mysql://localhost:5656/ejemplo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+---
+spring:
+  profiles: test
+  datasource:
+    username: sebaszc
+    password: ejemplo123
+    url: jdbc:mysql://localhost:5656/ejemplo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+---
+
+spring:
+  profiles: dev
+  datasource:
+    username: sebaszc
+    password: ejemplo123
+    url: jdbc:mysql://localhost:5656/ejemplo
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
